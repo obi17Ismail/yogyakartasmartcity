@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:map="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Account.AccountFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh_account"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/img_account"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            tools:src="@tools:sample/avatars" />
+
+                        <ImageView
+                            android:id="@+id/btn_image_account"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_alignRight="@+id/img_account"
+                            android:layout_alignBottom="@+id/img_account"
+                            android:src="@drawable/ic_photocamera_solid" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/relativeLayout_account"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp">
+
+                        <TextView
+                            style="@style/TextContent"
+                            android:text="Hallo," />
+
+                        <TextView
+                            android:id="@+id/txt_name_account"
+                            style="@style/TextContent.AccountTitle"
+                            tools:text="Obi Ismail" />
+
+                        <Button
+                            android:id="@+id/btn_edit_account"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="right"
+                            android:drawableLeft="@drawable/ic_edit_white16dp"
+                            android:drawablePadding="10dp"
+                            android:text="Edit Profil"
+                            style="@style/Button.Profile" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txt_join_account"
+                    style="@style/TextContent.AccountSmall"
+                    android:layout_marginTop="15dp"
+                    tools:text="Bergabung pada 24-Oct-2019" />
+
+                <TextView
+                    style="@style/TextContent.AccountTitle"
+                    android:layout_marginTop="15dp"
+                    android:text="Email"
+                    android:textAllCaps="true"/>
+
+                <TextView
+                    android:id="@+id/txt_email_account"
+                    style="@style/TextContent"
+                    tools:text="obiismail17.oi10@gmail.com" />
+
+                <TextView
+                    style="@style/TextContent.AccountTitle"
+                    android:layout_marginTop="15dp"
+                    android:text="No HP"
+                    android:textAllCaps="true"/>
+
+                <TextView
+                    android:id="@+id/txt_phone_account"
+                    style="@style/TextContent"
+                    tools:text="082218808701" />
+
+                <TextView
+                    android:id="@+id/txt_location_account"
+                    style="@style/TextContent.AccountSmall"
+                    android:textSize="12sp"
+                    android:drawableLeft="@drawable/ic_placeholder_grey16"
+                    android:drawablePadding="5dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="10dp"
+                    android:lineSpacingExtra="4dp"
+                    tools:text="Bandung" />
+
+                <fragment
+                    android:id="@+id/map_detail_tempat_map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    map:cameraBearing="0" />
+
+                <!--            <com.google.android.gms.maps.MapView-->
+                <!--                android:id="@+id/mapView_account"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="150dp"-->
+                <!--                android:layout_marginTop="20dp"/>-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="#eeeeee" />
+
+                <RelativeLayout
+                    android:id="@+id/btn_help_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_help_setting"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_question_solid" />
+
+                    <TextView
+                        style="@style/TextContent.Setting"
+                        android:layout_toRightOf="@+id/img_help_setting"
+                        android:text="Pusat Bantuan" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_next_grey" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_terms_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_terms_setting"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_policy_solid" />
+
+                    <TextView
+                        style="@style/TextContent.Setting"
+                        android:layout_toRightOf="@+id/img_terms_setting"
+                        android:text="Syarat &amp; Ketentuan" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_next_grey" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_about_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_about_setting"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_info_solid" />
+
+                    <TextView
+                        style="@style/TextContent.Setting"
+                        android:layout_toRightOf="@+id/img_about_setting"
+                        android:text="Tentang Aplikasi" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_next_grey" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_logout_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_logout_setting"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_logout_solid" />
+
+                    <TextView
+                        style="@style/TextContent.Setting"
+                        android:layout_toRightOf="@+id/img_logout_setting"
+                        android:text="Logout" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_next_grey" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_pb_account"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:alpha="0.40"
+        android:gravity="center_vertical|center_horizontal"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/pb_account"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

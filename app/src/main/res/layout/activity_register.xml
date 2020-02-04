@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Auth.LoginActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_register"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/toolbar_title_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="DAFTAR"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar_register"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="50dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="NAMA"
+                    style="@style/TextContent.TitleEditText.BgWhite" />
+
+                <EditText
+                    android:id="@+id/et_name_register"
+                    android:inputType="text"
+                    style="@style/EditText" />
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:text="EMAIL"
+                    style="@style/TextContent.TitleEditText.BgWhite" />
+
+                <EditText
+                    android:id="@+id/et_email_register"
+                    android:inputType="textEmailAddress"
+                    style="@style/EditText" />
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:text="NO HP"
+                    style="@style/TextContent.TitleEditText.BgWhite" />
+
+                <EditText
+                    android:id="@+id/et_phone_register"
+                    android:inputType="number"
+                    style="@style/EditText" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/textView55"
+                        android:text="Password"
+                        style="@style/TextContent.TitleEditText.BgWhite" />
+
+                    <EditText
+                        android:id="@+id/et_password_register"
+                        android:inputType="textPassword"
+                        android:layout_below="@+id/textView55"
+                        style="@style/EditText" />
+
+                    <ImageView
+                        android:id="@+id/img_check_register"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignBottom="@+id/et_password_register"
+                        android:layout_alignEnd="@+id/et_password_register"
+                        android:layout_alignRight="@+id/et_password_register"
+                        android:layout_alignTop="@+id/et_password_register"
+                        android:layout_marginBottom="9dp"
+                        android:visibility="invisible"
+                        android:layout_marginRight="3.5dp"
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/ic_check"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/textView53"
+                        android:text="Ulangi Password"
+                        style="@style/TextContent.TitleEditText.BgWhite" />
+
+                    <EditText
+                        android:id="@+id/et_password2_register"
+                        android:inputType="textPassword"
+                        android:layout_below="@+id/textView53"
+                        style="@style/EditText" />
+
+                    <ImageView
+                        android:id="@+id/img_check2_register"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignBottom="@+id/et_password2_register"
+                        android:layout_alignEnd="@+id/et_password2_register"
+                        android:layout_alignRight="@+id/et_password2_register"
+                        android:layout_alignTop="@+id/et_password2_register"
+                        android:layout_marginBottom="9dp"
+                        android:visibility="invisible"
+                        android:layout_marginRight="3.5dp"
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/ic_check"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_marginTop="20dp"
+                android:text="Daftar"
+                style="@style/Button.General" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="90dp"
+                android:padding="20dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical|center_horizontal">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="false"
+                    android:layout_alignBottom="@+id/btn_login_register"
+                    android:layout_alignTop="@+id/btn_login_register"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="Sudah punya akun? "
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/btn_login_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:padding="5dp"
+                    android:layout_toEndOf="@+id/textView6"
+                    android:layout_toRightOf="@+id/textView6"
+                    android:text="Login disini"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_pb_register"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar_register"
+        android:background="#000000"
+        android:alpha="0.40"
+        android:gravity="center_vertical|center_horizontal"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/pb_register"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

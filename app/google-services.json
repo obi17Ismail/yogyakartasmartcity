@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "513402730200",
+    "firebase_url": "https://yogyakarta-smart-city.firebaseio.com",
+    "project_id": "yogyakarta-smart-city",
+    "storage_bucket": "yogyakarta-smart-city.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:513402730200:android:34eed7df65b05b125949ad",
+        "android_client_info": {
+          "package_name": "com.obi.yogyakartasmartcity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "513402730200-367lus1r6t5s524kd8cj28ti7c6m955u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.obi.yogyakartasmartcity",
+            "certificate_hash": "ea075f89e2504aa20ec1e046ee5ec403199031a2"
+          }
+        },
+        {
+          "client_id": "513402730200-pfv0o1darjaaj89l6utrk8umvgkv3osg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo5SeRkxOpqr3i68lvvlHWFZWWE5kphOM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "513402730200-pfv0o1darjaaj89l6utrk8umvgkv3osg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

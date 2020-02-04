@@ -1,0 +1,376 @@
+{
+	"info": {
+		"_postman_id": "4c9084ce-e652-4add-b094-74ae177c0230",
+		"name": "Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "test2",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test2@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "082218808701",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://yogyakarta.nahltech.com/api/user/register",
+					"protocol": "https",
+					"host": [
+						"yogyakarta",
+						"nahltech",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test2@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://yogyakarta.nahltech.com/api/user/login",
+					"protocol": "https",
+					"host": [
+						"yogyakarta",
+						"nahltech",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "DPRD DIY Soroti Tumpukan Sampah di Kali Buntung Yogya",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Obi Ismail/Videos/c2015e89-e2e9-4d25-8ee0-46c471d4d99b_169.jpeg"
+						},
+						{
+							"key": "author",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Ketua Komisi A DPRD DIY Eko Suwanto menyoroti tumpukan sampah di Kali Buntung, Kelurahan Bumijo, Kecamatan Jetis, Kota Yogyakarta. Ia meminta tumpukan sampah itu segera ditangani Pemkot Yogyakarta.\n\n\"Kami melihat aliran Sungai (Kali) Buntung terganggu karena ada longsoran di bawah jembatan serta sampah yang menumpuk,\" kata Eko dalam keterangannya kepada wartawan, Senin (6/1/2020).\n\nEko menyambangi Kali Buntung hari ini dalam kunjungan kerjanya bersama Kepala Pelaksana BPBD Kota Yogyakarta Hari Wahyudi dan Camat Jetis Sumargandi. Saat berkunjung di Kali Buntung, ia mendapati banyak tumpukan sampah.\n\nPolitikus PDIP tersebut kecewa dengan kondisi Kali Buntung yang dipenuhi sampah. Untuk itu ia meminta Wali Kota Yogyakarta Haryadi Suyuti bertanggung jawab dalam mengelola sampah dan juga memperbaiki tanggul rusak di Kali Buntung.\n\n\"Wali Kota (Yogyakarta) tak boleh diam, harus benar-benar memastikan ada perbaikan tanggul di bawah jembatan serta mengelola sampah secara baik agar aliran sungai kembali normal,\" tuturnya.\n\n\"Kita ingin sungai (kali) ini asri, bersih dan aman, sehingga warga bisa terhindar dari bencana alam,\" lanjutnya.\n\nEko berharap setelah ini Pemkot Yogyakarta segera mengambil tindakan. Sebab menurutnya, wajah Kota Yogyakarta yang dikenal sebagai Kota Budaya dapat tercoreng karena kondisi sungainya yang dipenuhi tumpukan sampah.\n\n\"Kesan sungai yang penuh sampah dan rawan bencana banjir ini akan mencoreng citra Yogya sebagai Kota Budaya, dan ini Pak Wali Kota harus bekerja keras karena sampah yang ada mengganggu aliran air dan dapat mengganggu kesehatan,\" sebutnya.\n\nSementara agar penumpukan sampah tidak terjadi di sungai atau kali, Eko menyarankan untuk dipasang CCTV di pinggir sungai. Dengan begitu diharapkan bisa dipantau dan diketahui siapa saja yang selama ini membuang sampah ke sungai. (ush/rih)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://yogyakarta.nahltech.com/api/articles/create",
+					"protocol": "https",
+					"host": [
+						"yogyakarta",
+						"nahltech",
+						"com"
+					],
+					"path": [
+						"api",
+						"articles",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://yogyakarta.nahltech.com/api/articles",
+					"protocol": "https",
+					"host": [
+						"yogyakarta",
+						"nahltech",
+						"com"
+					],
+					"path": [
+						"api",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer $2y$10$nMes.AFbuE/18E7dsbfEOeEmiFqPEZVxMBDbewPaQtJk073TRY/C.",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "test2",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "082218808701",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://yogyakarta.nahltech.com/api/user/update/2",
+					"protocol": "https",
+					"host": [
+						"yogyakarta",
+						"nahltech",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Article Detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "article_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://yogyakarta.nahltech.com/api/articles/detail",
+					"protocol": "https",
+					"host": [
+						"yogyakarta",
+						"nahltech",
+						"com"
+					],
+					"path": [
+						"api",
+						"articles",
+						"detail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer $2y$10$nMes.AFbuE/18E7dsbfEOeEmiFqPEZVxMBDbewPaQtJk073TRY/C.",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "https://yogyakarta.nahltech.com/api/user/change_image",
+					"protocol": "https",
+					"host": [
+						"yogyakarta",
+						"nahltech",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"change_image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer $2y$10$nMes.AFbuE/18E7dsbfEOeEmiFqPEZVxMBDbewPaQtJk073TRY/C.",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "new_password",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "repeat_new_password",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://yogyakarta.nahltech.com/api/user/change_password",
+					"protocol": "https",
+					"host": [
+						"yogyakarta",
+						"nahltech",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"change_password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "term",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://yogyakarta.nahltech.com/api/articles/search",
+					"protocol": "https",
+					"host": [
+						"yogyakarta",
+						"nahltech",
+						"com"
+					],
+					"path": [
+						"api",
+						"articles",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

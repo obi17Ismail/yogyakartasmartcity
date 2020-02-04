@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Account.EditActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_edit"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            app:popupTheme="@style/AppTheme">
+
+            <TextView
+                android:id="@+id/toolbar_title_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="EDIT PROFILE"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar_edit"
+        android:layout_above="@+id/relativeLayout_edit">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:text="Nama"
+                style="@style/TextContent.TitleEditText.BgWhite" />
+
+            <EditText
+                android:id="@+id/et_name_edit"
+                android:inputType="textEmailAddress"
+                tools:text="Obi Ismail"
+                style="@style/EditText" />
+
+            <TextView
+                android:text="Email"
+                android:layout_marginTop="20dp"
+                style="@style/TextContent.TitleEditText.BgWhite" />
+
+            <EditText
+                android:id="@+id/et_email_edit"
+                android:inputType="textEmailAddress"
+                tools:text="obiismail17.oi10@gmail.com"
+                style="@style/EditText" />
+
+            <TextView
+                android:text="No Hp"
+                android:layout_marginTop="20dp"
+                style="@style/TextContent.TitleEditText.BgWhite" />
+
+            <EditText
+                android:id="@+id/et_phone_edit"
+                android:inputType="number"
+                tools:text="082218808701"
+                style="@style/EditText" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical|center_horizontal">
+
+        <Button
+            android:id="@+id/btn_save_edit"
+            android:layout_marginBottom="5dp"
+            style="@style/Button.General"
+            android:text="Simpan" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_pb_edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar_edit"
+        android:background="#000000"
+        android:alpha="0.40"
+        android:gravity="center_vertical|center_horizontal"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/pb_edit"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

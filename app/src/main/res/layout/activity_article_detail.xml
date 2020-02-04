@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Article.ArticleDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_detail"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/toolbar_title_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="DETAIL BERITA"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbar_detail">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="60dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/txt_title_detail"
+                    style="@style/TextContent.Title"
+                    tools:text="Tolong! SMA N 3 Huruna di Nias Rusak Parah: Lantai Tanah Becek, Atap Jebol" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="7dp">
+
+                    <TextView
+                        android:id="@+id/txt_date_detail"
+                        style="@style/TextContent"
+                        android:textColor="@color/textColorSecond"
+                        android:textSize="11sp"
+                        tools:text="Rabu, 9 Oktober 2019 - 18:30 WIB" />
+
+                    <TextView
+                        android:id="@+id/txt_view_detail"
+                        style="@style/TextContent"
+                        android:textColor="@color/textColorSecond"
+                        android:textSize="11sp"
+                        android:layout_alignParentRight="true"
+                        tools:text="Dilihat 200x" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_detail"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/article_detail" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/txt_author_detail"
+                    style="@style/TextContent.Title"
+                    android:textColor="@color/textColorSecond"
+                    android:textSize="11sp"
+                    tools:text="Penulis: Obi Ismail" />
+
+                <TextView
+                    android:id="@+id/txt_content_detail"
+                    style="@style/TextContent"
+                    android:layout_marginTop="15dp"
+                    android:lineSpacingExtra="1.5sp"
+                    tools:text="Sintang - Akses pendidikan dasar di daerah pedalaman hingga saat ini masih menjadi tantangan yang belum terpecahkan. Pemerintah masih mencari formula untuk membuat pemerataan pendidikan bagi anak-anak di daerah-daerah terpencil.
+Tak terkecuali, Kabupaten Sintang yang memiliki luas wilayah ketiga terbesar di Provinsi Kalimantan Barat setelah Kabupaten Ketapang dan Kabupaten Kapuas Hulu. Hampir menyamai luas Jawa Barat, luas wilayah Kabupaten Sintang yaitu 21.635 km dan terbagi ke dalam 14 Kecamatan dan 391 desa.
+Menurut Bupati Sintang Jarot Winarno, yang paling sulit dalam pembangunan berkelanjutan adalah menyeimbangkan antara konservasi, dengan menjaga lingkungan hidup, dengan pembangunan ekonomi dan sosial budaya. Hal itu karena dalam pembangunan suatu daerah, apalagi Kabupaten Sintang dengan kondisi banyaknya perbukitan dan hutan, perlu adanya perencanaan yang matang." />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_share_detail"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColorPrimary"
+        android:elevation="2dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:drawableLeft="@drawable/ic_share_black"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/btn_radius_white"
+        android:text="Bagikan" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_pb_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar_detail"
+        android:background="#000000"
+        android:alpha="0.40"
+        android:gravity="center_vertical|center_horizontal"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/pb_detail"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+</RelativeLayout>
